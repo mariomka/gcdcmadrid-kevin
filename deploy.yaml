@@ -1,17 +1,10 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "1"
-  creationTimestamp: 2019-03-16T11:05:37Z
-  generation: 1
   labels:
     run: madrid
   name: madrid
   namespace: default
-  resourceVersion: "1206"
-  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/madrid
-  uid: 6dd1cd2a-47db-11e9-b911-42010aa40118
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -31,7 +24,7 @@ spec:
         run: madrid
     spec:
       containers:
-      - image: gcr.io/k8s-workshop-campus/github_mariomka_gcdcmadrid-kevin@sha256:f1c279c430752c047875e84aa5ae17185ca47ba268443602752ae78a5ce1c5a2
+      - image: gcr.io/k8s-workshop-campus/github_mariomka_gcdcmadrid-kevin:bcd075e73b3c6108c2f41e1ed7d9698e3dbbab3b
         imagePullPolicy: IfNotPresent
         name: madrid
         ports:
